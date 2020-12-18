@@ -22,4 +22,14 @@ contract WorkingwithVariables {
     function decrementUint () public {
         myUint8--;
     }
+
+    address public myAddress;
+    
+    function setMyAddress (address _myAddress) public {
+        myAddress = _myAddress;
+    }
+    
+    function getBalanceofAddress() public view returns(uint) {
+        return myAddress.balance;
+    }
 }
